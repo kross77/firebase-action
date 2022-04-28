@@ -29,4 +29,9 @@ if [ -n "$PROJECT_ID" ]; then
     firebase use --add "$PROJECT_ID"
 fi
 
+if [ -n "$USE_PROJECT" ]; then
+    echo "switch firebase to '$USE_PROJECT' project"
+    firebase use "$USE_PROJECT"
+fi
+
 sh -c "firebase $*"
